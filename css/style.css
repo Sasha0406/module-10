@@ -192,27 +192,38 @@ h2,
 }
 .banner {
   display: block;
-  background-image: url('../images/Layer15.jpg'),
-    -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, 0.9)), to(rgba(243, 129, 129, 0.9)));
-  background-image: url('../images/Layer15.jpg'),
-    -o-linear-gradient(bottom, rgba(252, 227, 138, 0.9) 0%, rgba(
-            243,
-            129,
-            129,
-            0.9
-          )
-          100%);
-  background-image: url('../images/Layer15.jpg'),
-    linear-gradient(
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(252, 227, 138, 0.9)),
+      to(rgba(243, 129, 129, 0.9))
+    ),
+    url('../images/Layer15.jpg');
+  background-image: -o-linear-gradient(
+      bottom,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    ),
+    url('../images/Layer15.jpg');
+  background-image: linear-gradient(
       360deg,
       rgba(252, 227, 138, 0.9) 0%,
       rgba(243, 129, 129, 0.9) 100%
-    );
-  background-blend-mode: lighten;
+    ),
+    url('../images/Layer15.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-top: 246px;
   padding-bottom: 230px;
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
+  .banner {
+    background-image: url('../images/Layer15@2x.jpg');
+  }
 }
 .banner__title {
   font-family: 'Montserrat';
@@ -230,13 +241,6 @@ h2,
   text-transform: none;
   text-align: center;
   margin-bottom: 44px;
-}
-@media (-webkit-min-device-pixel-ratio: 2),
-  (-o-min-device-pixel-ratio: 2/1),
-  (min-resolution: 192dpi) {
-  .banner {
-    background-image: url('../images/Layer15@2x.jpg');
-  }
 }
 .banner-button {
   display: block;
